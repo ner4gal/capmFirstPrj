@@ -1,0 +1,23 @@
+ID,NAME,AGE,CLASS_ID,GENDER,CITY
+1,John Doe,20,10,M,New York
+2,Jane Doe,19,11,F,Los Angeles
+3,John Smith,21,12,M,Chicago
+4,Jane Smith,22,13,F,Houston
+5,John Brown,23,14,M,Phoenix
+6,Jane Brown,24,15,F,Philadelphia
+7,John White,25,16,M,San Antonio
+8,Jane White,26,17,F,San Diego
+9,John Black,27,18,M,Dallas
+10,Jane Black,28,19,F,San Jose
+11,John Green,29,20,M,Austin
+12,Jane Green,30,21,F,Jacksonville
+13,John Blue,31,22,M,San Francisco
+14,Jane Blue,32,23,F,Indianapolis
+15,John Red,33,24,M,Columbus
+16,Jane Red,34,25,F,Fort Worth
+17,John Orange,35,26,M,Charlotte
+18,Jane Orange,36,27,F,Detroit
+19,John Yellow,37,28,M,El Paso
+20,Jane Yellow,38,29,F,Seattle
+21,John Purple,39,30,M,Denver
+22,Jane Purple,40,31,F,Washington
