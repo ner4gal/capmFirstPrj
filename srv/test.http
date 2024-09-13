@@ -1,0 +1,63 @@
+
+###
+
+http://localhost:4004/odata/v4/CatalogService
+
+
+###
+
+http://localhost:4004/odata/v4/CatalogService/$metadata
+
+
+###
+
+http://localhost:4004/odata/v4/CatalogService/POs
+
+### 
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=2&$skip=2
+
+### 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=salaryAmount ge 100000
+
+### 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/$count
+
+### 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+
+###post op
+
+POST  http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+
+Content-Type: application/json
+
+{
+      "nameFirst": "Sally",
+      "nameMiddle": null,
+      "nameLast": "Spring",
+      "nameInitials": null,
+      "sex": "F",
+      "language": "E",
+      "phoneNumber": "+1 224 374 524",
+      "email": "sally.spring@itelo.info",
+      "loginName": "SPRINGS",
+      "Currency_code": "USD",
+      "salaryAmount": 55549,
+      "accountNumber": "111222333",
+      "bankId": "510000655",
+      "bankName": "My Bank of Antioch"
+   
+}
+
+
+### DELETE EMP DATA 
+DELETE  http://localhost:4004/odata/v4/CatalogService/EmployeeSet/e1b7839d-a7c8-4db9-a1e1-29a51f4f9227
+
+
+###  
+POST  http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC28052/boost
+
+Content-Type: application/json 
+
+{}
