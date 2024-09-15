@@ -9,6 +9,7 @@ service CatalogService @(path:'CatalogService') {
     entity POs as projection on transaction.purchaseorder
     actions{
          action boost() returns POs;
+         function largestOrder() returns POs;
     };
     entity POItems as projection on transaction.poitems;
 }

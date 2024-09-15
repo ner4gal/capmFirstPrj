@@ -51,13 +51,23 @@ Content-Type: application/json
 }
 
 
+
 ### DELETE EMP DATA 
 DELETE  http://localhost:4004/odata/v4/CatalogService/EmployeeSet/e1b7839d-a7c8-4db9-a1e1-29a51f4f9227
 
 
 ###  
-POST  http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC28052/boost
+POST  http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C052/boost
 
 Content-Type: application/json 
 
 {}
+
+###
+
+http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C052
+
+
+### 
+
+GET http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C052/largestOrder()
