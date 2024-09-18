@@ -5,7 +5,7 @@ using { nergal.commons as common } from './commons';
 
 context master {
     entity businesspartner {
-        key NODE_KEY: common.Guid;
+        key NODE_KEY: common.Guid @title : '{i18n>PARTNER_GUID}';
         BP_ROLE: String(2);
         EMAIL_ADDRESS: String(105);
         PHONE_NUMBER: String(32);
@@ -13,7 +13,7 @@ context master {
         WEB_ADDRESS: String(44);
         ADDRESS_GUID: Association to address;
         BP_ID: String(32);
-        COMPANY_NAME: String(250);
+        COMPANY_NAME: String(250) @title : '{i18n>Country}';
     }
 
     entity address {
@@ -70,8 +70,8 @@ context master {
 }
 context transaction {
     entity purchaseorder : common.Amount {
-        key NODE_KEY: common.Guid;
-        PO_ID: String(40);
+        key NODE_KEY: common.Guid ;
+        PO_ID: String(40)  @title : '{i18n>PO_ID }' ;
         PARTNER_GUID: Association to master.businesspartner;
         LIFECYCLE_STATUS: String(1);
         OVERALL_STATUS: String(1);

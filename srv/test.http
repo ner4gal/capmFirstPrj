@@ -33,22 +33,13 @@ POST  http://localhost:4004/odata/v4/CatalogService/EmployeeSet
 Content-Type: application/json
 
 {
-      "nameFirst": "Sally",
-      "nameMiddle": null,
-      "nameLast": "Spring",
-      "nameInitials": null,
-      "sex": "F",
-      "language": "E",
-      "phoneNumber": "+1 224 374 524",
-      "email": "sally.spring@itelo.info",
-      "loginName": "SPRINGS",
-      "Currency_code": "USD",
-      "salaryAmount": 55549,
-      "accountNumber": "111222333",
-      "bankId": "510000655",
-      "bankName": "My Bank of Antioch"
+   4  
    
 }
+
+
+
+
 
 
 
@@ -71,3 +62,8 @@ http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C0
 ### 
 
 GET http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C052/largestOrder()
+
+
+### 
+
+GET http://localhost:4004/odata/v4/MyService/$metadata
