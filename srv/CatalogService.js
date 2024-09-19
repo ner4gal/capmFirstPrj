@@ -36,16 +36,14 @@ module.exports = cds.service.impl(async function() {
       });
 
       this.on('largestOrder',async(req) => {
-        console.log('aa gaya');
-        
         //start a db transaction 
          try {
           //const ID = req.params[0];
           const tx = cds.tx(req);
-          const recordData = tx.read(POs).orderBy({
+          const recordData = await tx.read(POs).orderBy({
             GROSS_AMOUNT: 'desc'
           }).limit(1);
-          
+          return recordData;
          }catch (error){
           return "Error"+ error.toString();
          }

@@ -20,7 +20,7 @@ aspect Amount: {
 }
 
 //reusable data types
-type Guid : String(32);
+type Guid : String(80);
 
 type PhoneNumber: String(30)@assert.format:'^(?:\+\d{1,3})?[-.\s]?\(?\d{1,4}\)?[-.\s]?\d{1,12}$';
 
@@ -32,7 +32,7 @@ type EmailAddress: String(80)@assert.format : '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+
 
 //resable types
 
-type guID : String(32);
+type guID : String(80);
 
 //aspect definitions to hold addess and contact details
 aspect Address {

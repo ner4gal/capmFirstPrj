@@ -33,7 +33,7 @@ POST  http://localhost:4004/odata/v4/CatalogService/EmployeeSet
 Content-Type: application/json
 
 {
-   4  
+   
    
 }
 
@@ -61,7 +61,7 @@ http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C0
 
 ### 
 
-GET http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC2C052/largestOrder()
+GET http://localhost:4004/odata/v4/CatalogService/POs/largestOrder
 
 
 ### 
