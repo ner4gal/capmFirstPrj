@@ -1,4 +1,5 @@
 
+
 ###
 
 http://localhost:4004/odata/v4/CatalogService
@@ -65,5 +66,9 @@ GET http://localhost:4004/odata/v4/CatalogService/POs/largestOrder
 
 
 ### 
-
 GET http://localhost:4004/odata/v4/MyService/$metadata
+
+
+### test srty 
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Authorization: Basic nergal:

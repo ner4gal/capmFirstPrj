@@ -1,37 +1,75 @@
 {
-  "name": "capmFirstPrj",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^8",
-    "express": "^4",
-    "@cap-js/hana": "^1"
+  "name":"capmFirstPrj",
+  "version":"1.0.0",
+  "description":"A simple CAP project.",
+  "repository":"<Add your repository here>",
+  "license":"UNLICENSED",
+  "private":true,
+  "dependencies":{
+     "@cap-js/hana":"^1",
+     "@sap/cds":"^8",
+     "@sap/xssec":"^4.2.4",
+     "express":"^4"
   },
-  "devDependencies": {
-    "@cap-js/sqlite": "^1",
-    "@cap-js/cds-types": "^0.6",
-    "@sap/ux-specification": "UI5-1.128"
+  "devDependencies":{
+     "@cap-js/cds-types":"^0.6",
+     "@cap-js/sqlite":"^1",
+     "@sap/ux-specification":"UI5-1.128"
   },
-  "scripts": {
-    "start": "cds-serve",
-    "nergalapp": "cds watch",
-    "watch-purchaseorderapp": "cds watch --open purchaseorderapp/webapp/index.html?sap-ui-xx-viewCache=false"
+  "scripts":{
+     "start":"cds-serve",
+     "nergalapp":"cds watch",
+     "watch-purchaseorderapp":"cds watch --open purchaseorderapp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
-  "cds": {
-    "requires": {
-      "db": "hana"
-    },
-    "sql": {
-      "native_hana_associations": false
-    }
+  "cds":{
+     "requires":{
+        "requires":{
+           "db":{
+              "kind":"hana",
+              "model":"srv/db"
+           }
+        },
+        "uaa":{
+           "kind":"xsuaa"
+        },
+        "auth":{
+           "[production]": { "strategy": "JWT" },
+           "[development]":{
+              "strategy":"mock",
+              "users":{
+                 "guts":{
+                    
+                    "roles":[
+                       "Viewer"
+                    ],
+                    "userAttributes":{
+                       "BankName":[
+                       "My Bank of New York"
+                    ]
+                    }
+                    
+                 },
+                 "nergal":{
+                    "roles":[
+                       "Viewer",
+                       "Admin"
+                    ],
+                    "userAttributes":{
+                       "BankName":[
+                       "My Bank of Antioch"
+                    ]
+                    }
+                    
+                 }
+              }
+           }
+        }
+     }
   },
-  "sql": {
-    "native_hana_associations": false
+  "sql":{
+     "native_hana_associations":false
   },
-  "sapux": [
-    "app/purchaseorderapp"
+  "sapux":[
+     "app/purchaseorderapp"
   ]
 }

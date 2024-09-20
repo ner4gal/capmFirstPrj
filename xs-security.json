@@ -1,0 +1,51 @@
+{
+  "xsappname" : "capmfirstprj", 
+  "scopes"     : [ { 
+                    "name" : "$XSAPPNAME.Viewer", 
+                    "description" : "Viewer" }, 
+                   { 
+                    "name" : "$XSAPPNAME.Admin", 
+                    "description" : "Admin" }
+                 
+],
+ "attributes" : [ { 
+                    "name" : "BankName", 
+                    "description" : "Bank Name to allow row level access", 
+                    "valueType" : "string" }
+                 ], 
+ "role-templates": [ { 
+                    "name"                : "Viewer", 
+                    "description"         : "View all employees", 
+                    "default-role-name": "Viewer: Authorized to Read All employees",
+                    "scope-references"    : [ 
+                                         "$XSAPPNAME.Viewer" ], 
+                    "attribute-references": [
+                                            {
+                                            "name" : "BankName"
+                    }
+                                            ]  
+                    }, 
+                   { 
+                    "name"               : "Admin", 
+                    "description"        : "Edit, delete employees", 
+                    "scope-references"   : [ 
+                                          "$XSAPPNAME.Admin"
+                                           ]
+
+                    } 
+                   ], 
+                   "authorities"         : [
+                                          "$ACCEPT_GRANTED_AUTHORITIES"
+                                           ],
+                    "oauth2-configuration": {
+                                            "token-validity": 900,
+                                            "refresh-token-validity": 1800,
+                                            "redirect-uris": [
+                                                "https://api.cf.us10-001.hana.ondemand.com"
+                                            ],
+                                            "autoapprove": "false"
+                                          },
+
+
+                    "xsenableasyncservice":"true"
+}
